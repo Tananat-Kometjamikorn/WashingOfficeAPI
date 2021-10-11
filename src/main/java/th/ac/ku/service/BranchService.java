@@ -17,6 +17,10 @@ public class BranchService {
         return repository.findAll();
     }
 
+    public Branch getBranch(String username){
+        return repository.findById(username).orElse(null);
+    }
+
     public Branch create(Branch branch){
         repository.save(branch);
         return branch;

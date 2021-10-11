@@ -14,8 +14,7 @@ public class Branch {
     private String b_username;
     private String b_password;
     private String b_name;
-    @OneToMany(mappedBy = "branch", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "branch", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<OrderInfo> orderInfos;
 
 }

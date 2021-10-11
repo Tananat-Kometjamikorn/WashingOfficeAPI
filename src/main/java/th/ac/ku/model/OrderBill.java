@@ -2,6 +2,7 @@ package th.ac.ku.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,14 +13,17 @@ import java.util.UUID;
 @Setter
 public class OrderBill {
     @Id
-    @Column(name = "order_id" , columnDefinition = "VARCHAR(64)")
+    @GeneratedValue(generator = "UUID")
+    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(columnDefinition = "VARCHAR(64)")
     private UUID order_id;
 
     private String customer;
     private int cost;
     private Date bill_date;
 
-    @OneToOne(mappedBy = "orderBill")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn
     private OrderInfo orderInfo;
 
     @ManyToOne
