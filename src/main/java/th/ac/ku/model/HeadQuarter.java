@@ -1,11 +1,10 @@
 package th.ac.ku.model;
 
-import javax.persistence.*;
-
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import javax.persistence.*;
 
 @Entity
 @Getter

@@ -12,15 +12,14 @@ import java.util.UUID;
 @Setter
 public class OrderBill {
     @Id
-    @Column(name = "order_id")
+    @Column(name = "order_id" , columnDefinition = "VARCHAR(64)")
     private UUID order_id;
+
     private String customer;
     private int cost;
     private Date bill_date;
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "order_id")
+    @OneToOne(mappedBy = "orderBill")
     private OrderInfo orderInfo;
 
     @ManyToOne
