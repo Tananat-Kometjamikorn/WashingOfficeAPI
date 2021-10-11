@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Getter
@@ -16,6 +16,6 @@ public class Branch {
     private String b_name;
     @OneToMany(mappedBy = "branch", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    private Set<OrderInfo> orderInfos;
+    private List<OrderInfo> orderInfos;
 
 }

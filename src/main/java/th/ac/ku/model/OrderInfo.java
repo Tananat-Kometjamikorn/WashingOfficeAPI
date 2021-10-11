@@ -11,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Table(name = "orderinfo")
 public class OrderInfo {
 
     @Id
@@ -22,12 +23,11 @@ public class OrderInfo {
     private String c_name;
     private String c_phonenum;
     private Date order_date;
+
+    @OneToOne(mappedBy = "orderInfo", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private OrderBill orderBill;
+
     @ManyToOne
     private Branch branch;
-
-
-
-
-
-    
 }
