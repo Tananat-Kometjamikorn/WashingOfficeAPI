@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,7 +15,7 @@ public class Branch {
     private String b_username;
     private String b_password;
     private String b_name;
-    @OneToMany(mappedBy = "branch", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<OrderInfo> orderInfos;
+    @OneToMany(mappedBy = "branch")
+    private List<OrderInfo> orderInfos = new ArrayList<>();
 
 }

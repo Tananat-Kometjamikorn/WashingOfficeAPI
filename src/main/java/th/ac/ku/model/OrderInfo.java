@@ -14,22 +14,18 @@ import java.util.UUID;
 public class OrderInfo {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "VARCHAR(64)")
-    private UUID order_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int order_id;
 
     private String b_name;
     private String c_name;
     private String c_phonenum;
     private String order_date;
 
-    @OneToOne(mappedBy = "orderInfo", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "orderInfo")
     private OrderBill orderBill;
 
-    @OneToOne(mappedBy = "orderInfo", cascade = CascadeType.ALL,
-              fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "orderInfo")
     private Cloth cloth;
 
     @ManyToOne
