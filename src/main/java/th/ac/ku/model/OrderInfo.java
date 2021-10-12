@@ -22,14 +22,14 @@ public class OrderInfo {
     private String b_name;
     private String c_name;
     private String c_phonenum;
-    private Date order_date;
+    private String order_date;
 
     @OneToOne(mappedBy = "orderInfo", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
+            fetch = FetchType.LAZY)
     private OrderBill orderBill;
 
     @OneToOne(mappedBy = "orderInfo", cascade = CascadeType.ALL,
-              fetch = FetchType.LAZY, optional = false)
+              fetch = FetchType.LAZY)
     private Cloth cloth;
 
     @ManyToOne
