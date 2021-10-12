@@ -26,7 +26,7 @@ public class BranchService {
         return branch;
     }
 
-    public Branch update(String b_username, Branch requestBody){
+    public Branch updatePassword(String b_username, Branch requestBody){
         Branch record = repository.findById(b_username).orElse(null);
         if (record != null && requestBody.getB_password()!=null) {
                 record.setB_password(requestBody.getB_password());

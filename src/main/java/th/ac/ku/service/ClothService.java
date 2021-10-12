@@ -21,7 +21,11 @@ public class ClothService {
         return repository.findById(order_id).orElse(null);
     }
 
-    public Cloth update(UUID order_id, Cloth requestBody){
+    public Cloth create(Cloth cloth){
+        return repository.save(cloth);
+    }
+
+    public Cloth updateStatus(UUID order_id, Cloth requestBody){
         Cloth record = repository.findById(order_id).orElse(null);
         if (record != null) {
             record.setStatus(requestBody.getStatus());

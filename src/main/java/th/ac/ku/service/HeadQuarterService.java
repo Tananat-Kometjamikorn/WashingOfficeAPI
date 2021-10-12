@@ -23,8 +23,12 @@ public class HeadQuarterService {
         return headQuarter;
     }
 
-    public HeadQuarter update(String b_username, HeadQuarter requestBody){
-        HeadQuarter record = repository.findById(b_username).orElse(null);
+    public HeadQuarter getHeadQuarter(String h_username){
+        return repository.findById(h_username).orElse(null);
+    }
+
+    public HeadQuarter updatePassword(String h_username, HeadQuarter requestBody){
+        HeadQuarter record = repository.findById(h_username).orElse(null);
         if (record != null && requestBody.getH_password()!=null) {
             record.setH_password(requestBody.getH_password());
         }
