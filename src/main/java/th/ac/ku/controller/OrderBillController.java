@@ -21,7 +21,7 @@ public class OrderBillController {
     }
 
     @GetMapping("/{order_id}")
-    public OrderBill getOrderBill(@PathVariable UUID order_id){
+    public OrderBill getOrderBill(@PathVariable int order_id){
         return service.getOrderBill(order_id);
     }
 

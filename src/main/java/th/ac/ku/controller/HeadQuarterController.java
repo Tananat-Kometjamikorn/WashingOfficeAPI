@@ -2,7 +2,6 @@ package th.ac.ku.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import th.ac.ku.model.Branch;
 import th.ac.ku.model.HeadQuarter;
 import th.ac.ku.service.HeadQuarterService;
 
@@ -32,7 +31,7 @@ public class HeadQuarterController {
 
     @PutMapping("/{h_username}")
     public HeadQuarter updatePassword(@PathVariable String h_username,@RequestBody HeadQuarter headQuarter){
-        return service.updatePassword(h_username,headQuarter);
+        return service.update(h_username,headQuarter);
     }
 
 }

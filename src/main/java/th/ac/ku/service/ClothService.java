@@ -6,7 +6,6 @@ import th.ac.ku.model.Cloth;
 import th.ac.ku.repository.ClothRepository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class ClothService {
@@ -17,7 +16,7 @@ public class ClothService {
         return repository.findAll();
     }
 
-    public Cloth getCloth(UUID order_id){
+    public Cloth getCloth(int order_id){
         return repository.findById(order_id).orElse(null);
     }
 
@@ -25,7 +24,7 @@ public class ClothService {
         return repository.save(cloth);
     }
 
-    public Cloth updateStatus(UUID order_id, Cloth requestBody){
+    public Cloth update(int order_id, Cloth requestBody){
         Cloth record = repository.findById(order_id).orElse(null);
         if (record != null) {
             record.setStatus(requestBody.getStatus());

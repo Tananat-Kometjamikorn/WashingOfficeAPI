@@ -1,7 +1,6 @@
 package th.ac.ku.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import th.ac.ku.model.Cloth;
 import th.ac.ku.service.ClothService;
@@ -22,7 +21,7 @@ public class ClothController {
     }
 
     @GetMapping("/{order_id}")
-    public Cloth getCloth(@PathVariable UUID order_id){
+    public Cloth getCloth(@PathVariable int order_id){
         return service.getCloth(order_id);
     }
 
@@ -32,7 +31,7 @@ public class ClothController {
     }
 
     @PutMapping("/{order_id}")
-    public Cloth updateStatus(@PathVariable UUID order_id,@RequestBody Cloth branch){
-        return service.updateStatus(order_id,branch);
+    public Cloth updateStatus(@PathVariable int order_id,@RequestBody Cloth branch){
+        return service.update(order_id,branch);
     }
 }

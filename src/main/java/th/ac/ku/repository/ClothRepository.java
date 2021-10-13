@@ -7,4 +7,4 @@ import th.ac.ku.model.Cloth;
 import java.util.UUID;
 
 @Repository
-public interface ClothRepository extends JpaRepository<Cloth, UUID> {}
+public interface ClothRepository extends JpaRepository<Cloth, Integer> {}

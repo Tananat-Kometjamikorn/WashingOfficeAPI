@@ -17,7 +17,7 @@ public class OrderBillService {
         return repository.findAll();
     }
 
-    public OrderBill getOrderBill(UUID order_id){
+    public OrderBill getOrderBill(int order_id){
         return repository.findById(order_id).orElse(null);
     }
 

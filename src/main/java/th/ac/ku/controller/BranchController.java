@@ -31,6 +31,6 @@ public class BranchController {
 
     @PutMapping("/{b_username}")
     public Branch updatePassword(@PathVariable String b_username,@RequestBody Branch branch){
-        return service.updatePassword(b_username,branch);
+        return service.update(b_username,branch);
     }
 }

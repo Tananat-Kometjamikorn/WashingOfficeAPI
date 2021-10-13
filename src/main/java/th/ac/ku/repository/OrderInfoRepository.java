@@ -7,5 +7,5 @@ import th.ac.ku.model.OrderInfo;
 import java.util.UUID;
 
 @Repository
-public interface OrderInfoRepository extends JpaRepository<OrderInfo, UUID> {
+public interface OrderInfoRepository extends JpaRepository<OrderInfo, Integer> {
 }
