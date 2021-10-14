@@ -6,7 +6,6 @@ import th.ac.ku.model.OrderInfo;
 import th.ac.ku.service.OrderInfoService;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/orderInfo")
@@ -31,7 +30,7 @@ public class OrderInfoController {
     }
 
     @DeleteMapping("/{order_id}")
-    public OrderInfo delete(@PathVariable int order_id){
-        return service.delete(order_id);
+    public void delete(@PathVariable int order_id){
+        service.delete(order_id);
     }
 }

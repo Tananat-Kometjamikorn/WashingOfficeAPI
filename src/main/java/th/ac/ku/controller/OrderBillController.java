@@ -2,16 +2,15 @@ package th.ac.ku.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import th.ac.ku.model.Cloth;
 import th.ac.ku.model.OrderBill;
 import th.ac.ku.service.OrderBillService;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/orderBill")
 public class OrderBillController {
+
     @Autowired
     OrderBillService service;
 

@@ -14,7 +14,7 @@ import java.util.UUID;
 public class OrderInfo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int order_id;
 
     private String b_name;

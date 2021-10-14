@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class OrderBill {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int order_id;
 
     private String customer_name;
