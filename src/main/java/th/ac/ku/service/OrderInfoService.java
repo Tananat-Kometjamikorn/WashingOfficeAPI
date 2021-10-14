@@ -17,7 +17,7 @@ public class OrderInfoService {
         return repository.findAll();
     }
 
-    public OrderInfo getOrderInfo(UUID order_id){
+    public OrderInfo getOrderInfo(int order_id){
         return repository.findById(order_id).orElse(null);
     }
 
@@ -26,7 +26,7 @@ public class OrderInfoService {
         return orderInfo;
     }
 
-    public OrderInfo delete(UUID order_id){
+    public OrderInfo delete(int order_id){
         OrderInfo record = repository.findById(order_id).orElse(null);
         repository.deleteById(order_id);
         return record;

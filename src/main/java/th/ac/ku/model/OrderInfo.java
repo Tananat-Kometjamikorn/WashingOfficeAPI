@@ -23,9 +23,11 @@ public class OrderInfo {
     private String order_date;
 
     @OneToOne(mappedBy = "orderInfo")
+    @PrimaryKeyJoinColumn
     private OrderBill orderBill;
 
     @OneToOne(mappedBy = "orderInfo")
+    @PrimaryKeyJoinColumn
     private Cloth cloth;
 
     @ManyToOne

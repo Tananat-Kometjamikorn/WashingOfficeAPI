@@ -21,7 +21,7 @@ public class OrderInfoController {
     }
 
     @GetMapping("/{order_id}")
-    public OrderInfo getOrderInfo(@PathVariable UUID order_id){
+    public OrderInfo getOrderInfo(@PathVariable int order_id){
         return service.getOrderInfo(order_id);
     }
 
@@ -31,7 +31,7 @@ public class OrderInfoController {
     }
 
     @DeleteMapping("/{order_id}")
-    public OrderInfo delete(@PathVariable UUID order_id){
+    public OrderInfo delete(@PathVariable int order_id){
         return service.delete(order_id);
     }
 }

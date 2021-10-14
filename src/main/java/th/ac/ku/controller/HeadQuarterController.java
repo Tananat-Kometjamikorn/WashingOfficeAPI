@@ -30,7 +30,7 @@ public class HeadQuarterController {
     }
 
     @PutMapping("/{h_username}")
-    public HeadQuarter updatePassword(@PathVariable String h_username,@RequestBody HeadQuarter headQuarter){
+    public HeadQuarter update(@PathVariable String h_username,@RequestBody HeadQuarter headQuarter){
         return service.update(h_username,headQuarter);
     }
 

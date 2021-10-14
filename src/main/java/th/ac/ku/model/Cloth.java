@@ -18,7 +18,6 @@ public class Cloth{
     private int cloth_quantity;
 
     @OneToOne
-    @PrimaryKeyJoinColumn
     @MapsId
     private OrderInfo orderInfo;
 }
