@@ -3,9 +3,11 @@ package th.ac.ku.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -18,6 +20,6 @@ public class HeadQuarter {
     private String h_name;
 
     @OneToMany(mappedBy = "headQuarter")
-    private List<OrderBill> orderBills = new ArrayList<>();
+    private Set<OrderBill> orderBills = new HashSet<>();
 
 }

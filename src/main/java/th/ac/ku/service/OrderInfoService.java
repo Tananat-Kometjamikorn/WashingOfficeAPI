@@ -28,6 +28,6 @@ public class OrderInfoService {
 
     public void delete(int order_id){
         OrderInfo record = repository.findById(order_id).orElse(null);
-        repository.deleteById(order_id);
+        repository.deleteById(order_id);    
     }
 }

@@ -4,18 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-public class Branch {
-    @Id
-    private String b_username;
-    private String b_password;
-    private String b_name;
+public class Branch extends Account {
+
     @OneToMany(mappedBy = "branch")
-    private List<OrderInfo> orderInfos = new ArrayList<>();
+    private Set<OrderInfo> orderInfos = new HashSet<>();
 
 }
