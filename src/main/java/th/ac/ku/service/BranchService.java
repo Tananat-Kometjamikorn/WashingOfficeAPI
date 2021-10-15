@@ -28,8 +28,8 @@ public class BranchService {
 
     public Branch update(String b_username, Branch requestBody){
         Branch record = repository.findById(b_username).orElse(null);
-        if (record != null && requestBody.getB_password()!=null) {
-                record.setB_password(requestBody.getB_password());
+        if (record != null && requestBody.getPassword()!=null) {
+                record.setPassword(requestBody.getPassword());
         }
         else throw new IllegalArgumentException("Fill all blank lines");
         repository.saveAndFlush(record);

@@ -29,8 +29,8 @@ public class HeadQuarterService {
 
     public HeadQuarter update(String h_username, HeadQuarter requestBody){
         HeadQuarter record = repository.findById(h_username).orElse(null);
-        if (record != null && requestBody.getH_password()!=null) {
-            record.setH_password(requestBody.getH_password());
+        if (record != null && requestBody.getPassword()!=null) {
+            record.setPassword(requestBody.getPassword());
         }
         else throw new IllegalArgumentException("Fill all blank lines");
         repository.saveAndFlush(record);
