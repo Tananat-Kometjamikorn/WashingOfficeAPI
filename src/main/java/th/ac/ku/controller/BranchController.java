@@ -19,7 +19,7 @@ public class BranchController {
         return service.getAll();
     }
 
-    @GetMapping("/{b_username}")
+    @GetMapping("/{username}")
     public Branch getBranch(@PathVariable String b_username){
         return service.getBranch(b_username);
     }
@@ -29,8 +29,8 @@ public class BranchController {
         return service.create(branch);
     }
 
-    @PutMapping("/{b_username}")
-    public Branch updatePassword(@PathVariable String b_username,@RequestBody Branch branch){
-        return service.update(b_username,branch);
+    @PutMapping("/{username}")
+    public Branch updatePassword(@PathVariable String username,@RequestBody Branch branch){
+        return service.update(username,branch);
     }
 }

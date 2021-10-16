@@ -19,9 +19,9 @@ public class HeadQuarterController {
         return service.getAll();
     }
 
-    @GetMapping("/{h_username}")
-    public HeadQuarter getHeadQuarter(@PathVariable String h_username){
-        return service.getHeadQuarter(h_username);
+    @GetMapping("/{username}")
+    public HeadQuarter getHeadQuarter(@PathVariable String username){
+        return service.getHeadQuarter(username);
     }
 
     @PostMapping
@@ -29,9 +29,9 @@ public class HeadQuarterController {
         return service.create(headQuarter);
     }
 
-    @PutMapping("/{h_username}")
-    public HeadQuarter update(@PathVariable String h_username,@RequestBody HeadQuarter headQuarter){
-        return service.update(h_username,headQuarter);
+    @PutMapping("/{username}")
+    public HeadQuarter update(@PathVariable String username,@RequestBody HeadQuarter headQuarter){
+        return service.update(username,headQuarter);
     }
 
 }
