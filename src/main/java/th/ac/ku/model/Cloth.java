@@ -12,7 +12,7 @@ public class Cloth{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int orderID;
+    private int orderId;
 
     private String status;
     private int clothQuantity;

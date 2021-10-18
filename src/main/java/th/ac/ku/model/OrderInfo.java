@@ -15,7 +15,7 @@ public class OrderInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int order_id;
+    private int orderId;
 
     private String branchName;
     private String customerName;
