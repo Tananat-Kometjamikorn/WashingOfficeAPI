@@ -12,10 +12,10 @@ public class Cloth{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int order_id;
+    private int orderID;
 
     private String status;
-    private int cloth_quantity;
+    private int clothQuantity;
 
     @OneToOne
     @MapsId

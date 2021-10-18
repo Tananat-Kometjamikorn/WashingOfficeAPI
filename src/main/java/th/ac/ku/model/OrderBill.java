@@ -12,11 +12,11 @@ public class OrderBill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int order_id;
+    private int orderId;
 
-    private String customer_name;
+    private String customerName;
     private int cost;
-    private String bill_date;
+    private String orderDate;
 
     @OneToOne
     @MapsId

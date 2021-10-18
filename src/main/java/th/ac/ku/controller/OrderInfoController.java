@@ -8,7 +8,7 @@ import th.ac.ku.service.OrderInfoService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/orderInfo")
+@RequestMapping("/orderinfo")
 public class OrderInfoController {
 
     @Autowired

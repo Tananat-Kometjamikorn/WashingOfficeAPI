@@ -17,10 +17,10 @@ public class OrderInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int order_id;
 
-    private String b_name;
-    private String c_name;
-    private String c_phonenum;
-    private String order_date;
+    private String branchName;
+    private String customerName;
+    private String customerPhone;
+    private String orderDate;
 
     @OneToOne(mappedBy = "orderInfo")
     @PrimaryKeyJoinColumn

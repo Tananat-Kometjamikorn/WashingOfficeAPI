@@ -14,6 +14,6 @@ import java.util.Set;
 public class HeadQuarter extends Account{
 
     @OneToMany(mappedBy = "headQuarter")
-    private Set<OrderBill> orderBills = new HashSet<>();
+    private Set<OrderBill> orderBillSet = new HashSet<>();
 
 }
