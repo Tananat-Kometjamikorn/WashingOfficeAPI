@@ -18,7 +18,4 @@ public class OrderBill {
     private int cost;
     private String orderDate;
 
-    @ManyToOne
-    private HeadQuarter headQuarter;
-
 }

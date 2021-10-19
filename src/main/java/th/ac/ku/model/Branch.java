@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 public class Branch extends Account {
 
-    @OneToMany(mappedBy = "branch")
+    @OneToMany
     private Set<OrderInfo> orderInfoSet = new HashSet<>();
 
 }

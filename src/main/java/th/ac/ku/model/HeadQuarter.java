@@ -13,7 +13,7 @@ import java.util.Set;
 @Setter
 public class HeadQuarter extends Account{
 
-    @OneToMany(mappedBy = "headQuarter")
+    @OneToMany
     private Set<OrderBill> orderBillSet = new HashSet<>();
 
 }

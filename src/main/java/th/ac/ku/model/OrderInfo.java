@@ -30,8 +30,4 @@ public class OrderInfo {
     @PrimaryKeyJoinColumn
     private Cloth cloth;
 
-    // ??????
-    @ManyToOne
-
-    private Branch branch;
 }
