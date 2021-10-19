@@ -19,9 +19,9 @@ public class OrderBillController {
         return service.getAll();
     }
 
-    @GetMapping("/{order_id}")
-    public OrderBill getOrderBill(@PathVariable int order_id){
-        return service.getOrderBill(order_id);
+    @GetMapping("/{orderId}")
+    public OrderBill getOrderBill(@PathVariable int orderId){
+        return service.getOrderBill(orderId);
     }
 
     @PostMapping

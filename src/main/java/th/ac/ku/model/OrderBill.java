@@ -18,10 +18,6 @@ public class OrderBill {
     private int cost;
     private String orderDate;
 
-    @OneToOne
-    @MapsId
-    private OrderInfo orderInfo;
-
     @ManyToOne
     private HeadQuarter headQuarter;
 

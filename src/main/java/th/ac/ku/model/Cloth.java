@@ -17,7 +17,4 @@ public class Cloth{
     private String status;
     private int clothQuantity;
 
-    @OneToOne
-    @MapsId
-    private OrderInfo orderInfo;
 }

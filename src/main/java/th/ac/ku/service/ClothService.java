@@ -16,16 +16,17 @@ public class ClothService {
         return repository.findAll();
     }
 
-    public Cloth getCloth(int order_id){
-        return repository.findById(order_id).orElse(null);
+    public Cloth getCloth(int orderId){
+        return repository.findById(orderId).orElse(null);
     }
 
     public Cloth create(Cloth cloth){
-        return repository.save(cloth);
+        repository.save(cloth);
+        return cloth;
     }
 
-    public Cloth update(int order_id, Cloth requestBody){
-        Cloth record = repository.findById(order_id).orElse(null);
+    public Cloth update(int orderId, Cloth requestBody){
+        Cloth record = repository.findById(orderId).orElse(null);
         if (record != null) {
             record.setStatus(requestBody.getStatus());
             repository.saveAndFlush(record);

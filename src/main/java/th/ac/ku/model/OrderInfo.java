@@ -22,14 +22,16 @@ public class OrderInfo {
     private String customerPhone;
     private String orderDate;
 
-    @OneToOne(mappedBy = "orderInfo")
+    @OneToOne
     @PrimaryKeyJoinColumn
     private OrderBill orderBill;
 
-    @OneToOne(mappedBy = "orderInfo")
+    @OneToOne(cascade = CascadeType.ALL , orphanRemoval = true)
     @PrimaryKeyJoinColumn
     private Cloth cloth;
 
+    // ??????
     @ManyToOne
+
     private Branch branch;
 }

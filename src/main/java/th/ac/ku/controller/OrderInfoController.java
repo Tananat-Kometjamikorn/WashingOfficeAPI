@@ -19,9 +19,9 @@ public class OrderInfoController {
         return service.getAll();
     }
 
-    @GetMapping("/{order_id}")
-    public OrderInfo getOrderInfo(@PathVariable int order_id){
-        return service.getOrderInfo(order_id);
+    @GetMapping("/{orderId}")
+    public OrderInfo getOrderInfo(@PathVariable int orderId){
+        return service.getOrderInfo(orderId);
     }
 
     @PostMapping
@@ -29,8 +29,8 @@ public class OrderInfoController {
         return service.create(orderInfo);
     }
 
-    @DeleteMapping("/{order_id}")
-    public void delete(@PathVariable int order_id){
-        service.delete(order_id);
+    @DeleteMapping("/{orderId}")
+    public void delete(@PathVariable int orderId){
+        service.delete(orderId);
     }
 }

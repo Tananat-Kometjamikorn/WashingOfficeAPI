@@ -20,9 +20,9 @@ public class ClothController {
         return service.getAll();
     }
 
-    @GetMapping("/{order_id}")
-    public Cloth getCloth(@PathVariable int order_id){
-        return service.getCloth(order_id);
+    @GetMapping("/{orderId}")
+    public Cloth getCloth(@PathVariable int orderId){
+        return service.getCloth(orderId);
     }
 
     @PostMapping
@@ -30,8 +30,8 @@ public class ClothController {
         return service.create(cloth);
     }
 
-    @PutMapping("/{order_id}")
-    public Cloth updateStatus(@PathVariable int order_id,@RequestBody Cloth branch){
-        return service.update(order_id,branch);
+    @PutMapping("/{orderId}")
+    public Cloth updateStatus(@PathVariable int orderId,@RequestBody Cloth branch){
+        return service.update(orderId,branch);
     }
 }

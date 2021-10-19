@@ -17,8 +17,8 @@ public class OrderInfoService {
         return repository.findAll();
     }
 
-    public OrderInfo getOrderInfo(int order_id){
-        return repository.findById(order_id).orElse(null);
+    public OrderInfo getOrderInfo(int orderId){
+        return repository.findById(orderId).orElse(null);
     }
 
     public OrderInfo create(OrderInfo orderInfo){
@@ -26,8 +26,8 @@ public class OrderInfoService {
         return orderInfo;
     }
 
-    public void delete(int order_id){
-        OrderInfo record = repository.findById(order_id).orElse(null);
-        repository.deleteById(order_id);    
+    public void delete(int orderId){
+        OrderInfo record = repository.findById(orderId).orElse(null);
+        repository.deleteById(orderId);
     }
 }
