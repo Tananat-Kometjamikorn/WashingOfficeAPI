@@ -30,8 +30,5 @@ public class ClothController {
         return service.create(cloth);
     }
 
-    @PutMapping("/{orderId}")
-    public Cloth updateStatus(@PathVariable int orderId,@RequestBody Cloth branch){
-        return service.update(orderId,branch);
-    }
+
 }

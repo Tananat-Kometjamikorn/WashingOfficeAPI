@@ -2,6 +2,7 @@ package th.ac.ku.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import th.ac.ku.model.Cloth;
 import th.ac.ku.model.OrderInfo;
 import th.ac.ku.service.OrderInfoService;
 
@@ -32,5 +33,10 @@ public class OrderInfoController {
     @DeleteMapping("/{orderId}")
     public void delete(@PathVariable int orderId){
         service.delete(orderId);
+    }
+
+    @PutMapping("/{orderId}")
+    public void updateStatus(@PathVariable int orderId, @RequestBody OrderInfo orderInfo){
+        service.update(orderId,orderInfo);
     }
 }

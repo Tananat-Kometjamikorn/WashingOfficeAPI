@@ -2,6 +2,7 @@ package th.ac.ku.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import th.ac.ku.model.Cloth;
 import th.ac.ku.model.OrderInfo;
 import th.ac.ku.repository.OrderInfoRepository;
 
@@ -29,5 +30,13 @@ public class OrderInfoService {
     public void delete(int orderId){
         OrderInfo record = repository.findById(orderId).orElse(null);
         repository.deleteById(orderId);
+    }
+
+    public void update(int orderId, OrderInfo requestBody){
+        OrderInfo record = repository.findById(orderId).orElse(null);
+        if (record != null) {
+            record.getCloth().setStatus(requestBody.getCloth().getStatus());
+            repository.saveAndFlush(record);
+        }
     }
 }
