@@ -21,6 +21,7 @@ public class OrderInfo {
     private String customerName;
     private String customerPhone;
     private String orderDate;
+    private String closedDate;
 
     @OneToOne
     @PrimaryKeyJoinColumn
