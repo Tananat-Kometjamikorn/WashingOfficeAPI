@@ -27,12 +27,12 @@ public class HeadQuarterService {
         return repository.findById(h_username).orElse(null);
     }
 
-    public HeadQuarter update(String h_username, HeadQuarter requestBody){
-        HeadQuarter record = repository.findById(h_username).orElse(null);
+    public HeadQuarter update(String username, HeadQuarter requestBody){
+        HeadQuarter record = repository.findById(username).orElse(null);
         if (record != null && requestBody.getPassword()!=null) {
             record.setPassword(requestBody.getPassword());
         }
-        else throw new IllegalArgumentException("Fill all blank lines");
+        else throw new IllegalArgumentException("hq error api");
         repository.saveAndFlush(record);
         return record;
     }

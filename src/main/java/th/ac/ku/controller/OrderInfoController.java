@@ -36,7 +36,7 @@ public class OrderInfoController {
     }
 
     @PutMapping("/{orderId}")
-    public void updateStatus(@PathVariable int orderId, @RequestBody OrderInfo orderInfo){
+    public void update(@PathVariable int orderId, @RequestBody OrderInfo orderInfo){
         service.update(orderId,orderInfo);
     }
 }

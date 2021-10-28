@@ -24,14 +24,5 @@ public class ClothService {
         repository.save(cloth);
         return cloth;
     }
-//
-//    public Cloth update(int orderId, Cloth requestBody){
-//        Cloth record = repository.findById(orderId).orElse(null);
-//        if (record != null) {
-//            record.setStatus(requestBody.getStatus());
-//            repository.saveAndFlush(record);
-//        }
-//        return record;
-//    }
 
 }

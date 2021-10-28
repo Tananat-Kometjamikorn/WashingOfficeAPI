@@ -26,12 +26,12 @@ public class BranchService {
         return branch;
     }
 
-    public Branch update(String b_username, Branch requestBody){
-        Branch record = repository.findById(b_username).orElse(null);
+    public Branch update(String username, Branch requestBody){
+        Branch record = repository.findById(username).orElse(null);
         if (record != null && requestBody.getPassword()!=null) {
                 record.setPassword(requestBody.getPassword());
         }
-        else throw new IllegalArgumentException("Fill all blank lines");
+        else throw new IllegalArgumentException("api branch error");
         repository.saveAndFlush(record);
         return record;
     }
