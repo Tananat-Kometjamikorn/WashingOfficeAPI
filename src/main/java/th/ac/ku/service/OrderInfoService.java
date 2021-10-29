@@ -36,6 +36,7 @@ public class OrderInfoService {
         OrderInfo record = repository.findById(orderId).orElse(null);
         if (record != null) {
             record.getCloth().setStatus(requestBody.getCloth().getStatus());
+            record.setClosedDate(requestBody.getClosedDate());
             repository.saveAndFlush(record);
         }
     }
