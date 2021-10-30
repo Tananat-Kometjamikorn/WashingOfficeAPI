@@ -14,8 +14,8 @@ public class OrderBill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
 
-    private String customerName;
     private int cost;
-    private String orderDate;
+
+    private String cleanStatus;
 
 }

@@ -8,7 +8,7 @@ import th.ac.ku.service.OrderBillService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/orderBill")
+@RequestMapping("/orderbill")
 public class OrderBillController {
 
     @Autowired

@@ -23,6 +23,9 @@ public class OrderInfoService {
     }
 
     public OrderInfo create(OrderInfo orderInfo){
+        System.out.println("---------------------------------");
+        System.out.println(orderInfo.getOrderBill().toString());
+        System.out.println(orderInfo.getCloth().toString());
         repository.save(orderInfo);
         return orderInfo;
     }
@@ -35,6 +38,10 @@ public class OrderInfoService {
     public void update(int orderId, OrderInfo requestBody){
         OrderInfo record = repository.findById(orderId).orElse(null);
         if (record != null) {
+            System.out.println("----------------------");
+            System.out.println(requestBody.getOrderBill().getCleanStatus());
+            record.getOrderBill().setCleanStatus(requestBody.getOrderBill().getCleanStatus());
+            record.getOrderBill().setCost(requestBody.getOrderBill().getCost());
             record.getCloth().setStatus(requestBody.getCloth().getStatus());
             record.setClosedDate(requestBody.getClosedDate());
             repository.saveAndFlush(record);

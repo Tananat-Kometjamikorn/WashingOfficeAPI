@@ -23,7 +23,7 @@ public class OrderInfo {
     private String orderDate;
     private String closedDate;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL , orphanRemoval = true)
     @PrimaryKeyJoinColumn
     private OrderBill orderBill;
 
