@@ -2,12 +2,10 @@ package th.ac.ku.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import th.ac.ku.model.Cloth;
 import th.ac.ku.model.OrderInfo;
 import th.ac.ku.repository.OrderInfoRepository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class OrderInfoService {
@@ -42,7 +40,7 @@ public class OrderInfoService {
             System.out.println(requestBody.getOrderBill().getCleanStatus());
             record.getOrderBill().setCleanStatus(requestBody.getOrderBill().getCleanStatus());
             record.getOrderBill().setCost(requestBody.getOrderBill().getCost());
-            record.getCloth().setStatus(requestBody.getCloth().getStatus());
+            record.getCloth().setCurrentStatus(requestBody.getCloth().getCurrentStatus());
             record.setClosedDate(requestBody.getClosedDate());
             repository.saveAndFlush(record);
         }

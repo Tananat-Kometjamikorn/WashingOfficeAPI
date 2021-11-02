@@ -14,7 +14,7 @@ public class Cloth{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
 
-    private String status;
+    private String currentStatus;
     private int clothQuantity;
 
 }
